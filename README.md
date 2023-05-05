@@ -47,7 +47,7 @@ imagine --control-image assets/indiana.jpg  --control-mode openpose --caption-te
     <img src="assets/indiana-pose-polar-bear.jpg" height="256">
 </p>
 
-**Canny Edge Control**
+#### Canny Edge Control
 
 ```bash
 imagine --control-image assets/lena.png  --control-mode canny "photo of a woman with a hat looking at the camera"
@@ -59,7 +59,7 @@ imagine --control-image assets/lena.png  --control-mode canny "photo of a woman 
     <img src="assets/lena-canny-generated.jpg" height="256">
 </p>
 
-**HED Boundary Control**
+#### HED Boundary Control
 
 ```bash
 imagine --control-image dog.jpg  --control-mode hed  "photo of a dalmation"
@@ -71,7 +71,7 @@ imagine --control-image dog.jpg  --control-mode hed  "photo of a dalmation"
     <img src="assets/dog-hed-boundary-dalmation.jpg" height="256">
 </p>
 
-**Depth Map Control**
+#### Depth Map Control
 
 ```bash
 imagine --control-image fancy-living.jpg  --control-mode depth  "a modern living room"
@@ -83,7 +83,7 @@ imagine --control-image fancy-living.jpg  --control-mode depth  "a modern living
     <img src="assets/fancy-living-depth-generated.jpg" height="256">
 </p>
 
-**Normal Map Control**
+#### Normal Map Control
 
 ```bash
 imagine --control-image bird.jpg  --control-mode normal  "a bird"
@@ -95,7 +95,7 @@ imagine --control-image bird.jpg  --control-mode normal  "a bird"
     <img src="assets/bird-normal-generated.jpg" height="256">
 </p>
 
-**Image Shuffle Control**
+#### Image Shuffle Control
 
 Generates the image based on elements of the control image. Kind of similar to style transfer.
 ```bash
@@ -108,7 +108,7 @@ The middle image is the "shuffled" input image
     <img src="assets/pearl_shuffle_clown_019331_1_kdpmpp2m15_PS7.5_img2img-0.0_a_clown.jpg" height="256">
 </p>
 
-**Edit Instructions Control**
+#### Editing Instructions Control
 
 Similar to instructPix2Pix (below) but works with any SD 1.5 based model.
 ```bash
@@ -121,7 +121,7 @@ imagine --control-image pearl-girl.jpg  --control-mode edit --init-image-strengt
     <img src="assets/pearl_beach_019561_862735879_kdpmpp2m30_PS7.0_img2img-0.01_make_it_at_the_beach.jpg" height="256">
 </p>
 
-**Add Details Control (upscaling/super-resolution)**
+#### Add Details Control (upscaling/super-resolution)
 
 Replaces existing details in an image. Good to use with --init-image-strength 0.2
 ```bash
