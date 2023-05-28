@@ -1,3 +1,7 @@
+# WHAT IS DIFFERENT
+This is a forked project.
+It is exactly as the the parent project, but the safety check has been removed to improve speed.
+
 # ImaginAIry 🤖🧠
 [![Downloads](https://pepy.tech/badge/imaginairy)](https://pepy.tech/project/imaginairy)
 [![image](https://img.shields.io/pypi/v/imaginairy.svg)](https://pypi.org/project/imaginairy/)

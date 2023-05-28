@@ -147,31 +147,9 @@ _SPECIAL_CARE_DESCRIPTIONS = []
 
 
 def create_safety_score(img, safety_mode=SafetyMode.STRICT):
-    if is_blurry(img):
-        sr = SafetyResult()
-        sr.add_special_care_score(0, 0, 1)
-        sr.add_special_care_score(1, 0, 1)
-        sr.add_special_care_score(2, 0, 1)
-        sr.add_nsfw_score(0, 0, 1)
-        return sr
-
-    safety_feature_extractor, safety_checker = safety_models()
-    safety_checker_input = safety_feature_extractor([img], return_tensors="pt")
-    clip_input = safety_checker_input.pixel_values
-
-    safety_result = safety_checker(clip_input)[0]
-
-    if safety_result.is_special_care_nsfw:
-        img.paste((150, 0, 0), (0, 0, img.size[0], img.size[1]))
-        safety_result.is_filtered = True
-        logger.info(
-            f"    ⚠️🔞️  Filtering NSFW image. nsfw score: {safety_result.nsfw_score}"
-        )
-    elif safety_mode == SafetyMode.STRICT and safety_result.is_nsfw:
-        img.paste((50, 0, 0), (0, 0, img.size[0], img.size[1]))
-        safety_result.is_filtered = True
-        logger.info(
-            f"    ⚠️  Filtering NSFW image. nsfw score: {safety_result.nsfw_score}"
-        )
-
-    return safety_result
+    sr = SafetyResult()
+    sr.add_special_care_score(0, 0, 1)
+    sr.add_special_care_score(1, 0, 1)
+    sr.add_special_care_score(2, 0, 1)
+    sr.add_nsfw_score(0, 0, 1)
+    return sr
